@@ -1,0 +1,11 @@
+Here's the study guide:
+
+Supervised vs. Unsupervised learning algorithms
+Dependent vs. Independent Variables
+Training vs. Testing data: train-validation-test split
+Linear regression: residuals, linearization
+Regression Analysis: parametric and non-parametric models, R-Squared and MSE
+Logistic Regression: intercept, slope, cross-entropy
+K-Nearest Neighbors algorithm: hyperparameters
+Decision Trees (self-study): Leaf nodes and predictions
+In all of the above, explain the algorithm
