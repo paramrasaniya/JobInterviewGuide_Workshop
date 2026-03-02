@@ -58,6 +58,191 @@ This workshop was designed to:
 
 ---
 
+# JobInterviewGuide Workshop — Targeted Practice Notebook
+
+This repository contains a Jupyter Notebook focused on **targeted interview practice** for common AI/ML concepts that are frequently tested in quizzes and job interviews.  
+The notebook follows a workshop format: **short talking points + clear steps + sanity checks + mini exercises**.
+
+## Notebook
+- `JobInterviewGuide_Workshop_VirajMistry.ipynb`
+
+## What this notebook covers
+The notebook focuses on topics that are common in interviews and quizzes:
+
+1. **Data Leakage + correct Train/Val/Test usage**
+   - What leakage is and why it causes “too good to be true” validation scores
+   - Best-practice workflow: split → fit preprocessing on train → evaluate on val/test
+
+2. **Scaling Leakage (the subtle one)**
+   - Why fitting scalers/encoders on full data leaks information
+   - Correct solution using scikit-learn Pipelines / ColumnTransformer
+
+3. **Metrics for Imbalanced Classification**
+   - Why accuracy can be misleading (e.g., 1% positive class)
+   - Precision, Recall, F1, ROC-AUC, **PR-AUC (Average Precision)**
+
+4. **Linear Regression: MSE and R² + Overfitting vs data issues**
+   - How to interpret regression metrics
+   - Bias/variance intuition and recognizing data/label noise
+
+5. **Logistic Regression Objective**
+   - Cross-entropy / **log loss**
+   - Why probability confidence matters (not just predicted class)
+
+6. **KNN Hyperparameters + Scaling**
+   - Why KNN is sensitive to feature scaling
+   - Effect of **k** and distance choice on bias/variance
+
+7. **Decision Trees: Leaf Nodes and Predictions**
+   - Classification tree leaves → majority class + class probabilities
+   - Regression tree leaves → mean target value in the leaf
+
+8. **Interview Drill (30-second explanations)**
+   - Quick prompts to practice speaking clearly under pressure
+
+9. **Reflection**
+   - Short reflection on mistakes + habits to avoid leakage and metric misuse
+
+## Requirements
+This notebook uses standard Python ML libraries:
+
+- Python 3.x  
+- numpy  
+- pandas  
+- matplotlib  
+- scikit-learn  
+
+Install with pip:
+```bash
+pip install numpy pandas matplotlib scikit-learn
+```
+
+## How to run
+1. Open the notebook in Jupyter Notebook / JupyterLab / VS Code:
+   - `JobInterviewGuide_Workshop_VirajMistry.ipynb`
+2. Run cells from top to bottom.
+3. Fill in the **TODO exercises** as practice (included to simulate interview-style thinking).
+
+## Outputs you will see
+- Small example DataFrames demonstrating leakage patterns  
+- Train/test splits and pipeline examples  
+- Classification metric outputs (precision/recall/F1, PR-AUC, ROC-AUC, confusion matrix)  
+- Regression metric outputs (MSE, R²)  
+- Short written interview answers + reflection responses
+
+## Goal (how to use this for interviews)
+The goal isn’t only to compute results—it's to **explain them**:
+- What went wrong (leakage, wrong metric, scaling mistakes)
+- What the correct pattern is (pipeline + strict split)
+- Which metric you’d choose and why (imbalanced vs balanced problems)
+
+## Author
+Viraj Mistry
+
+------------------------------------------------------------------------------------------------------------
+
+# JobInterviewGuide Workshop — Param Rasaniya
+ 
+This repo contains a single Jupyter Notebook that reviews key ML concepts that commonly show up in quizzes and interviews (metrics, data leakage, scaling, class imbalance, etc.).
+ 
+- **Notebook:** `JobInterviewGuide_Workshop_ParamRasaniya.ipynb`
+- **Name:** Param Rasaniya  
+- **Student ID:** 9086095  
+ 
+---
+ 
+## How to run (top to bottom)
+ 
+### Option A — VS Code
+1. Install the **Python** extension and **Jupyter** extension in VS Code.
+2. Open this folder in VS Code.
+3. Open `JobInterviewGuide_Workshop_ParamRasaniya.ipynb`.
+4. Select a Python kernel (recommended: a fresh virtual environment).
+5. Click **Run All**.
+ 
+### Option B — Jupyter (classic / Lab)
+1. (Optional) Create and activate a virtual environment.
+2. Install requirements.
+3. Launch Jupyter and open the notebook.
+4. Run all cells in order.
+ 
+---
+ 
+## Requirements
+ 
+This notebook uses:
+- `numpy`
+- `pandas`
+- `scikit-learn`
+- `matplotlib`
+ 
+Install with pip:
+```bash
+pip install numpy pandas scikit-learn matplotlib
+```
+ 
+> Note: The notebook is self-contained and uses small **synthetic datasets**, so it runs quickly and does not need external CSV files.
+ 
+---
+ 
+## What’s inside the notebook (sections)
+ 
+### 0) Setup
+- Imports required libraries.
+- Sets a random seed for reproducibility.
+- **Talking points included** to explain what each part is doing.
+ 
+### 1) Independent vs Dependent Variables (X vs y)
+- Simple example showing feature columns (**X**) vs target (**y**) using a house-price-style toy dataset.
+ 
+### 2) Regression vs Classification: choosing the right metric
+- Quick rules of thumb for when to use regression metrics vs classification metrics.
+ 
+### 3) MSE (Mean Squared Error)
+- Explains what MSE measures and why squaring matters.
+ 
+### 4) Data leakage (common mistake)
+- Shows the right order:
+  1. split train/test
+  2. fit preprocessing **only on train**
+  3. transform train + test using the same fitted transform
+ 
+### 5) Scaling and why it matters (KNN example)
+- Demonstrates how distance-based models (like KNN) are affected by feature scale.
+ 
+### 6) Confusion matrix + Precision / Recall / F1 (imbalanced classification)
+- Builds an imbalanced dataset.
+- Computes confusion matrix and key metrics.
+- Emphasizes **recall/sensitivity** when false negatives are expensive.
+ 
+### 7) Log Loss (probability-aware metric)
+- Shows how log loss punishes overconfident wrong probabilities more than “less confident” ones.
+ 
+### 8) Mini drill (interview-style)
+- Short Q&A prompts (e.g., “What is data leakage? Give one example.”).
+ 
+### 9) Reflection
+- Short reflection summarizing what was confusing and what was improved.
+ 
+---
+ 
+## Outputs you should expect
+ 
+When you run all cells:
+- A couple small printed outputs / quick checks (stdout).
+- Small displayed tables (pandas DataFrames).
+- **At least one plot** (a simple regression line / fit visualization).
+ 
+---
+ 
+ 
+## Troubleshooting
+ 
+- If you see `ModuleNotFoundError`, install the requirements using pip (see above) and restart the kernel.
+- If plots don’t show in VS Code, ensure you’re using the Jupyter extension and that the notebook is running on a Python kernel.
+
+------------------------------------------------------------------------------------------------------------
+
 ## 🧪 What Was Implemented
 
 ### ✅ 1. 15-Question Technical MCQ Interview
